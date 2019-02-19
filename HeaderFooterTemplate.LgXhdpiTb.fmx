@@ -1,0 +1,97 @@
+inherited HeaderFooterForm_LgXhdpiTb: THeaderFooterForm_LgXhdpiTb
+  ClientHeight = 829
+  ClientWidth = 480
+  DesignerMasterStyle = 3
+  inherited TabControl1: TTabControl
+    Size.Width = 480.000000000000000000
+    Size.Height = 829.000000000000000000
+    TabIndex = 3
+    Sizes = (
+      480s
+      829s
+      480s
+      829s
+      480s
+      829s
+      480s
+      829s)
+    inherited TabIngredients: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited Footer: TToolBar
+        Position.Y = 781.000000000000000000
+        Size.Width = 480.000000000000000000
+        inherited SpeedButton2: TSpeedButton
+          Position.X = 391.000000000000000000
+        end
+      end
+      inherited Header: TToolBar
+        Size.Width = 480.000000000000000000
+        inherited Rectangle1: TRectangle
+          Size.Width = 480.000000000000000000
+        end
+        inherited HeaderLabel: TLabel
+          Size.Width = 480.000000000000000000
+        end
+      end
+    end
+    inherited TabItems: TTabItem
+      IsSelected = False
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ToolBar1: TToolBar
+        Size.Width = 480.000000000000000000
+        inherited Rectangle2: TRectangle
+          Size.Width = 480.000000000000000000
+        end
+        inherited Label4: TLabel
+          Size.Width = 65.000000000000000000
+        end
+        inherited SpeedButton3: TSpeedButton
+          Position.Y = 32.000000000000000000
+        end
+      end
+      inherited Panel1: TPanel
+        Size.Width = 480.000000000000000000
+        inherited Edit1: TEdit
+          Position.X = 48.000000000000000000
+        end
+      end
+      inherited ToolBar3: TToolBar
+        Position.Y = 781.000000000000000000
+        Size.Width = 480.000000000000000000
+      end
+    end
+    inherited TabRecipies: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ToolBar2: TToolBar
+        Size.Width = 480.000000000000000000
+        inherited Rectangle3: TRectangle
+          Size.Width = 480.000000000000000000
+        end
+        inherited Label5: TLabel
+          Size.Width = 480.000000000000000000
+        end
+        inherited SpeedButton4: TSpeedButton
+          Position.X = 40.000000000000000000
+          Position.Y = 72.000000000000000000
+        end
+      end
+    end
+    inherited TabScan: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ToolBar4: TToolBar
+        Size.Width = 480.000000000000000000
+        inherited Rectangle4: TRectangle
+          Size.Width = 480.000000000000000000
+        end
+      end
+    end
+  end
+  inherited StyleBook1: TStyleBook [1]
+  end
+  inherited ActionList1: TActionList [2]
+  end
+end

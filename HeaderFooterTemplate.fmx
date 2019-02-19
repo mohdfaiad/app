@@ -4,77 +4,31 @@ object HeaderFooterForm: THeaderFooterForm
   Caption = 'Header Footer Form'
   ClientHeight = 567
   ClientWidth = 384
+  StyleBook = StyleBook1
   FormFactor.Width = 1440
   FormFactor.Height = 900
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
-  object Header: TToolBar
-    Size.Width = 384.000000000000000000
-    Size.Height = 48.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 0
-    object HeaderLabel: TLabel
-      Align = Contents
-      Size.Width = 384.000000000000000000
-      Size.Height = 48.000000000000000000
-      Size.PlatformDefault = False
-      StyleLookup = 'toollabel'
-      TextSettings.HorzAlign = Center
-      Text = 'Ingredients'
-    end
-  end
-  object Footer: TToolBar
-    Align = Bottom
-    Position.Y = 519.000000000000000000
-    Size.Width = 384.000000000000000000
-    Size.Height = 48.000000000000000000
-    Size.PlatformDefault = False
-    StyleLookup = 'bottomtoolbar'
-    TabOrder = 1
-    object SpeedButton1: TSpeedButton
-      Align = MostLeft
-      Size.Width = 89.000000000000000000
-      Size.Height = 48.000000000000000000
-      Size.PlatformDefault = False
-      Text = 'Scan'
-    end
-    object SpeedButton2: TSpeedButton
-      Align = MostRight
-      Position.X = 295.000000000000000000
-      Size.Width = 89.000000000000000000
-      Size.Height = 48.000000000000000000
-      Size.PlatformDefault = False
-      Text = 'Fud It!'
-    end
-  end
   object TabControl1: TTabControl
     Align = Client
     Size.Width = 384.000000000000000000
-    Size.Height = 471.000000000000000000
+    Size.Height = 567.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 0
-    TabOrder = 3
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 1
     TabPosition = None
+    OnClick = ActionItemsBackExecute
     Sizes = (
       384s
-      471s
+      567s
       384s
-      471s)
-    object TabItem1: TTabItem
-      CustomIcon = <
-        item
-        end>
-      IsSelected = True
-      Size.Width = 8.000000000000000000
-      Size.Height = 8.000000000000000000
-      Size.PlatformDefault = False
-      StyleLookup = ''
-      TabOrder = 0
-      Text = 'TabItem1'
-      ExplicitSize.cx = 8.000000000000000000
-      ExplicitSize.cy = 8.000000000000000000
-    end
-    object TabItem2: TTabItem
+      567s
+      384s
+      567s
+      384s
+      567s)
+    object TabIngredients: TTabItem
       CustomIcon = <
         item
         end>
@@ -84,19 +38,371 @@ object HeaderFooterForm: THeaderFooterForm
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
-      Text = 'TabItem2'
+      Text = 'TabIngredients'
       ExplicitSize.cx = 8.000000000000000000
       ExplicitSize.cy = 8.000000000000000000
+      object Label1: TLabel
+        Position.X = 128.000000000000000000
+        Position.Y = 184.000000000000000000
+        Text = 'Ingred'
+        TabOrder = 0
+      end
+      object Footer: TToolBar
+        Align = Bottom
+        Position.Y = 519.000000000000000000
+        Size.Width = 384.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'bottomtoolbar'
+        TabOrder = 1
+        object SpeedButton1: TSpeedButton
+          Action = TActionScan
+          Align = MostLeft
+          Enabled = True
+          ImageIndex = -1
+          Size.Width = 89.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Add'
+        end
+        object SpeedButton2: TSpeedButton
+          Action = TActionFud
+          Align = MostRight
+          Enabled = True
+          ImageIndex = -1
+          Position.X = 295.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Fud It!'
+        end
+      end
+      object Header: TToolBar
+        Size.Width = 384.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Rectangle1: TRectangle
+          Align = Client
+          Fill.Bitmap.Bitmap.PNG = {
+            89504E470D0A1A0A0000000D49484452000000050000000508060000008D6F26
+            E5000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            00184944415418576364B8B2EE3F031A6082D22880224106060001C0028B0542
+            4E160000000049454E44AE426082}
+          Fill.Bitmap.WrapMode = Tile
+          Fill.Kind = Bitmap
+          Sides = []
+          Size.Width = 384.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object HeaderLabel: TLabel
+          Align = Contents
+          StyledSettings = [Style]
+          Size.Width = 384.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.Font.Family = 'Arial'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Ingredients'
+        end
+      end
+    end
+    object TabItems: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItems'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object ToolBar1: TToolBar
+        Size.Width = 384.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Rectangle2: TRectangle
+          Align = Client
+          Fill.Bitmap.Bitmap.PNG = {
+            89504E470D0A1A0A0000000D49484452000000050000000508060000008D6F26
+            E5000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            00184944415418576364B8B2EE3F031A6082D22880224106060001C0028B0542
+            4E160000000049454E44AE426082}
+          Fill.Bitmap.WrapMode = Tile
+          Fill.Kind = Bitmap
+          Sides = []
+          Size.Width = 384.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Label4: TLabel
+          Align = Center
+          StyledSettings = [Style]
+          Size.Width = 384.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.Font.Family = 'Arial'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Add Items'
+        end
+        object SpeedButton3: TSpeedButton
+          Action = ActionItemsBack
+          Anchors = [akTop, akRight]
+          Enabled = True
+          StyledSettings = [Style]
+          ImageIndex = -1
+          Position.X = 320.000000000000000000
+          Size.Width = 65.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = #61701
+          TextSettings.Font.Family = 'Font Awesome 5 Free'
+          TextSettings.Font.Size = 35.000000000000000000
+          TextSettings.FontColor = claWhite
+        end
+      end
+      object Panel1: TPanel
+        Align = Top
+        Position.Y = 48.000000000000000000
+        Size.Width = 384.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object SpeedButton5: TSpeedButton
+          Align = MostRight
+          StyledSettings = [Size, Style, FontColor]
+          Position.X = 312.000000000000000000
+          Size.Width = 72.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          Text = #61442
+          TextSettings.Font.Family = 'Font Awesome 5 Free'
+        end
+        object Edit1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = HorzCenter
+          TabOrder = 1
+          Size.Width = 312.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Enter here to search...'
+        end
+      end
+      object ToolBar3: TToolBar
+        Align = Bottom
+        Position.Y = 519.000000000000000000
+        Size.Width = 384.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object SpeedButton6: TSpeedButton
+          Action = ActionScan
+          Align = Left
+          Enabled = True
+          StyledSettings = [Style, FontColor]
+          ImageIndex = -1
+          Size.Width = 81.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Scan '#61488
+          TextSettings.Font.Family = 'Font Awesome 5 Free'
+          TextSettings.Font.Size = 15.000000000000000000
+        end
+        object SpeedButton7: TSpeedButton
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 304.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Insert '#61543
+          TextSettings.Font.Family = 'Font Awesome 5 Free'
+          TextSettings.Font.Size = 15.000000000000000000
+        end
+      end
+    end
+    object TabRecipies: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabRecipies'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object Label3: TLabel
+        Position.X = 80.000000000000000000
+        Position.Y = 192.000000000000000000
+        Text = 'Recipies'
+        TabOrder = 0
+      end
+      object ToolBar2: TToolBar
+        Size.Width = 384.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Rectangle3: TRectangle
+          Align = Client
+          Fill.Bitmap.Bitmap.PNG = {
+            89504E470D0A1A0A0000000D49484452000000050000000508060000008D6F26
+            E5000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            00184944415418576364B8B2EE3F031A6082D22880224106060001C0028B0542
+            4E160000000049454E44AE426082}
+          Fill.Bitmap.WrapMode = Tile
+          Fill.Kind = Bitmap
+          Sides = []
+          Size.Width = 384.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Label5: TLabel
+          Align = Contents
+          StyledSettings = [Style]
+          Size.Width = 384.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.Font.Family = 'Arial'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Recipies'
+        end
+        object SpeedButton4: TSpeedButton
+          Action = ActionRecipieBack
+          Enabled = True
+          StyledSettings = [Style]
+          ImageIndex = -1
+          Size.Width = 57.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = #61700
+          TextSettings.Font.Family = 'Font Awesome 5 Free'
+          TextSettings.Font.Size = 35.000000000000000000
+          TextSettings.FontColor = claWhite
+        end
+      end
+    end
+    object TabScan: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabScan'
+      object ToolBar4: TToolBar
+        Size.Width = 384.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Rectangle4: TRectangle
+          Align = Client
+          Fill.Bitmap.Bitmap.PNG = {
+            89504E470D0A1A0A0000000D49484452000000050000000508060000008D6F26
+            E5000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            00184944415418576364B8B2EE3F031A6082D22880224106060001C0028B0542
+            4E160000000049454E44AE426082}
+          Fill.Bitmap.WrapMode = Tile
+          Fill.Kind = Bitmap
+          Sides = []
+          Size.Width = 384.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Label2: TLabel
+          Align = Center
+          StyledSettings = [Style]
+          Size.Width = 384.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.Font.Family = 'Arial'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Scan'
+        end
+        object SpeedButton8: TSpeedButton
+          Action = ActionScanBack
+          Anchors = [akTop, akRight]
+          Enabled = True
+          StyledSettings = [Style]
+          ImageIndex = -1
+          Position.X = 320.000000000000000000
+          Size.Width = 65.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = #61524
+          TextSettings.Font.Family = 'Font Awesome 5 Free'
+          TextSettings.Font.Size = 35.000000000000000000
+          TextSettings.FontColor = claWhite
+        end
+      end
     end
   end
   object ActionList1: TActionList
-    Left = 160
-    Top = 512
+    Left = 304
+    Top = 264
     object TActionScan: TAction
       Text = 'TActionScan'
+      OnExecute = TActionScanExecute
     end
     object TActionFud: TAction
       Text = 'TActionFud'
+      OnExecute = TActionFudExecute
     end
+    object ActionItemsBack: TAction
+      Text = 'ActionItemsBack'
+      OnExecute = ActionItemsBackExecute
+    end
+    object ActionRecipieBack: TAction
+      Text = 'ActionRecipieBack'
+      OnExecute = ActionRecipieBackExecute
+    end
+    object ActionScanBack: TAction
+      Text = 'ActionScanBack'
+      OnExecute = ActionScanBackExecute
+    end
+    object ActionScan: TAction
+      Text = 'ActionScan'
+      OnExecute = ActionScanExecute
+    end
+  end
+  object StyleBook1: TStyleBook
+    Styles = <
+      item
+      end
+      item
+        Platform = 'AndroidL Light'
+        ResourcesBin = {
+          464D585F5354594C4520322E3501060A50616E656C7374796C6503B200005450
+          46300A5452656374616E676C6500095374796C654E616D65060A50616E656C73
+          74796C6505416C69676E070643656E7465720A46696C6C2E436F6C6F72070863
+          6C6157686974650748697454657374080A53697A652E57696474680500000000
+          000000F005400B53697A652E4865696768740500000000000000F00540145369
+          7A652E506C6174666F726D44656661756C74080B5374726F6B652E4B696E6407
+          044E6F6E650756697369626C65080000}
+      end>
+    Left = 64
+    Top = 176
   end
 end
